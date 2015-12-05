@@ -1,43 +1,63 @@
 function tupeOfInput (a) {
     switch (Object.prototype.toString.call(a)){
         case '[object String]':
+            var arr = ['indexOf','search'];
             var type = 'String';
-            var res =  a.indexOf('University');
-            typeLog(a,'String','.indexOf',res);
+            var method;
+            var res;
 
+
+
+            //for(var i = 0; i<arr.length;i++){
+            //    res = a.arr[i]('University');
+            //}
+
+
+            method = '.indexOf()';
+            typeLog(a,type,method,res);
             res = a.lastIndexOf('bionic');
             typeLog(a,type,'.lastIndexOf()',res);
 
             res = a.search('bionic');
-            typeLog(a,type,'.search()',res);
+            method = '.search()';
+            typeLog(a,type,method,res);
 
             res = a.slice(0,5);
-            typeLog(a,type,'.slice()',res);
+            method = '.slice()';
+            typeLog(a,type,method,res);
 
             res = a.substring(7,13);
-            typeLog(a,type,'.substring()',res);
+            method = '.substring()';
+            typeLog(a,type,method,res);
 
             res = a.replace('bionic','Angular');
-            typeLog(a,type,'.replace()',res);
+            method = '.replace()';
+            typeLog(a,type,method,res);
 
             res = a.toUpperCase();
-            typeLog(a,type,'.toUpperCase()',res);
+            method = '.toUpperCase()';
+            typeLog(a,type,method,res);
 
             res = a.toLowerCase();
-            typeLog(a,type,'.toLowerCase()',res);
+            method = '.toUpperCase()';
+            typeLog(a,type,method,res);
 
 
             res = a.concat('1');
-            typeLog(a,type,'.concat()',res);
+            method = '.concat()';
+            typeLog(a,type,method,res);
 
             res = a.charAt(5);
-            typeLog(a,type,'.charAt',res);
+            method = '.charAt()';
+            typeLog(a,type,method,res);
 
             res = a.charCodeAt(0);
+            method = '.charAt()';
             typeLog(a,type,'.charCodeAt()',res);
 
             res = a.split(',');
-            typeLog(a,type,'.split()',res);
+            method = '.split()';
+            typeLog(a,type,method,res);
 
             break;
         case '[object Number]':
@@ -61,6 +81,7 @@ function tupeOfInput (a) {
             break;
 
         case '[object Array]':
+
             type = "Array";
 
             res = a.join(" * ");
