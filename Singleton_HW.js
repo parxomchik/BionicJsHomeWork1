@@ -44,9 +44,7 @@ console.log('Второй вариант 2:');
 
 var Singleton2;
 (function(){
-    var instance,
-        logined_users;
-
+    var instance;
     Singleton2 = function Singleton2() {
 
         if (instance) {
